@@ -1,4 +1,4 @@
-# SchsTestApp
+# SouthernCrossPublicWebApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.3.
 
@@ -28,21 +28,21 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Considerations & Decisions
 
-I have considered member search test as public web application, therefore not implemented any security related function (login).
+01) I have considered member search web application as public web application, therefore not implemented any security related function (login).
 
-In the search function member card number feild is option parameter so user having the flexibility to perform the search. activity. without card number.
+02) In the search function member card number feild is option parameter so user having the flexibility to perform the search. activity. without card number.
 
-could not written any test for web application because of the time limitation.
+03) Could not written any test for web application because of the time limitation.
 
 ## What we could have improved on
 
-We should not have menu for Search result page and search result page should display once user click seach button.
+01) We should not have menu for Search result page and search result page should display once user click seach button.
 
-we can add the login functionalty to the test application.
+03) we can add the login functionalty to the test application.
 
-Need to write the test cases for web application.
+04) Need to write the test cases for web application.
 
-Search member function we can improve allowing search with other properties also.
+05) Search member function we can improve allowing search with other properties also.
 
 
 
