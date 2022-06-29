@@ -30,9 +30,11 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 01) I have considered member search web application as public web application, therefore not implemented any security related function (login).
 
-02) In the search function member card number feild is option parameter so user having the flexibility to perform the search. activity. without card number.
+02) I have used the template driven form approach to build the search formed, because the search form is a simple form  and there is no much validation Available.
 
-03) Could not written any test for web application because of the time limitation.
+03) In the search function member card number feild is option parameter so user having the flexibility to perform the search. activity. without card number.
+
+04) Could not written any test for web application because of the time limitation.
 
 ## What we could have improved on
 
