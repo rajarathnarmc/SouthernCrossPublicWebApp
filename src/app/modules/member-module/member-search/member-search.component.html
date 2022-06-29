@@ -1,0 +1,51 @@
+<div class="card" style="width: 22rem; align-content: center; margin-left: 15px;">
+    <div class="card-body">
+        <h5 class="card-title">Member Search</h5>
+        <div class="d-flex p-2">
+            <div class="d-inline-flex p-2">
+                <div class="d-flex flex-row">
+                    <div class="d-flex flex-column">
+                        <div class="p-2">
+                            <label for="inputDate">Service Date</label>
+                            <input class="form-control" id="date" type="date" ngbDatepicker [(ngModel)]="serviceDate" />
+                        </div>
+                        <div class="p-2"><b>Search Using</b></div>
+                        <div class="p-2">
+                            <label for="policyNumber">Policy Number</label>
+                            <input type="text" class="form-control" id="policyNumber" [formControl]="policyNumber" required >
+                            <div *ngIf="policyNumber.invalid && (policyNumber.dirty || policyNumber.touched)"
+                                class="alert alert-danger">
+                                <div *ngIf="policyNumber.errors?.['required']">
+                                    Policy number is required
+                                </div>
+                                <div *ngIf="policyNumber.errors?.['pattern']">
+                                    Allow numbers only
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-2">
+                            <label for="membercardnumber">Member Card Number</label>
+                            <input type="text" class="form-control" id="membercardnumber"
+                                [formControl]="memberCardNumber">
+                        </div>
+                        <div class="p-2">
+                            <button type="submit" class="btn btn-primary" style="margin-right: 15px;"
+                                (click)="onSearchMember()">Search</button>
+                            <button type="submit" class="btn btn-primary" (click)="onReset()">Reset</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<Style>
+    .invalid-feedback {
+        display: none;
+        width: 100%;
+        margin-top: 0.25rem;
+        font-size: 0.875em;
+        color: #dc3545;
+    }
+</Style>

@@ -1,0 +1,39 @@
+
+<div class="card" style="width: 26rem; align-content: center; margin-left: 15px;">
+  <div class="card-body">
+    <h5 class="card-title">Search Results</h5>
+    <div class="card" style="width: 22rem; align-content: center; margin-left: 15px; margin-bottom: 15px;"  *ngFor="let user of memberList">
+      <div class="card-body">
+        <div class="d-flex p-2">
+          <div class="d-inline-flex p-2">
+            <div class="d-flex flex-row">
+              <div class="d-flex flex-column">
+                <div class="p-2"><b>First Name: </b> {{user?.firstName}}</div>
+                <div class="p-2"><b>First Name:</b> {{user?.lastName}}</div>
+                <div class="p-2"><b>Date of Birth:</b> {{user?.dataOfBirth}}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="width: 22rem; align-content: center; margin-left: 15px; margin-bottom: 15px;"  *ngIf="memberList.length==0">
+      <div class="card-body">
+        <div class="d-flex p-2">
+          <div class="d-inline-flex p-2">
+            <div class="d-flex flex-row">
+              <div class="d-flex flex-column">
+                <div class="p-2"><b>First Name: </b></div>
+                <div class="p-2"><b>First Name:</b></div>
+                <div class="p-2"><b>Date of Birth:</b></div>
+                <div class="p-2" *ngIf="emptyMsg"><b>{{ emptyMsg }}</b></div>
+                <div class="p-2" *ngIf="apiException"><b style="color: red;">{{ apiException }}</b></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
